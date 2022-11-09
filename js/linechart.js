@@ -4,7 +4,7 @@
 
 async function getData(){
     
-    const response = await fetch('../indices.csv');
+    const response = await fetch('../data/indices.csv');
     const data = await response.text(); // csv in text format
     //console.log(data);
 
