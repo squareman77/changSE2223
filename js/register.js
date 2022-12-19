@@ -46,11 +46,11 @@ document.getElementById("submitData").onclick = function () {
   console.log(afirstName);
   console.log(alastName);
 
-  if (!validation(firstName, lastName, email, password)) {
+  if (!validation(afirstName, alastName, aemail, apassword)) {
     return;
   }
 
-  createUserWithEmailAndPassword(auth, email, password)
+  createUserWithEmailAndPassword(auth, aemail, apassword)
     .then((userCredential) => {
       // Signed in
       const user = userCredential.user;
