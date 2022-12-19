@@ -17,6 +17,7 @@ const firebaseConfig = {
     apiKey: "AIzaSyB0gnD_CXByUr26Ri0RyTuGmZPBvZc76us",
     authDomain: "changresearch2223.firebaseapp.com",
     projectId: "changresearch2223",
+    databaseURL: "https://changresearch2223-default-rtdb.firebaseio.com",
     storageBucket: "changresearch2223.appspot.com",
     messagingSenderId: "561307488080",
     appId: "1:561307488080:web:64972117c9720bb6c7a655"
