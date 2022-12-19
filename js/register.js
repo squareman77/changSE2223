@@ -41,6 +41,10 @@ document.getElementById("submitData").onclick = function () {
   var password = document.getElementById("userPass").value;
   var firstName = document.getElementById("firstName").value;
   var lastName = document.getElementById("lastName").value;
+  console.log(email);
+  console.log(password);
+  console.log(firstName);
+  console.log(lastName);
 
   if (!validation(firstName, lastName, email, password)) {
     return;
