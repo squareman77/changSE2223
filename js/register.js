@@ -37,14 +37,14 @@ const firebaseConfig = {
 // ---------------- Register New Uswer --------------------------------//
 document.getElementById("submitData").onclick = function () {
   // Get the values from the form
-  var email = document.getElementById("userEmail").value;
-  var password = document.getElementById("userPass").value;
-  var firstName = document.getElementById("firstName").value;
-  var lastName = document.getElementById("lastName").value;
-  console.log(email);
-  console.log(password);
-  console.log(firstName);
-  console.log(lastName);
+  var aemail = document.getElementById("userEmail").value;
+  var apassword = document.getElementById("userPass").value;
+  var afirstName = document.getElementById("firstName").value;
+  var alastName = document.getElementById("lastName").value;
+  console.log(aemail);
+  console.log(apassword);
+  console.log(afirstName);
+  console.log(alastName);
 
   if (!validation(firstName, lastName, email, password)) {
     return;
@@ -54,14 +54,16 @@ document.getElementById("submitData").onclick = function () {
     .then((userCredential) => {
       // Signed in
       const user = userCredential.user;
+      console.log(aemail);
+  
 
       // Add user to database
       set(ref(db, "users/" + user.uid + "/accountInfo"), {
         uid: user.uid, // save userID for home.js reference
-        firstName: firstName,
-        lastName: lastName,
-        email: email,
-        password: encryptPass(password),
+        firstName: afirstName,
+        lastName: alastName,
+        email: aemail,
+        password: encryptPass(apassword)
       });
       // ...
       alert("Registration Successful!");
